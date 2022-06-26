@@ -10,6 +10,7 @@
 		5F5008642868C2A500768FEB /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5008632868C2A500768FEB /* NetworkConstants.swift */; };
 		5F5008662868C3DB00768FEB /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5008652868C3DB00768FEB /* APICaller.swift */; };
 		5F5008682868C49000768FEB /* TrendingMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5008672868C49000768FEB /* TrendingMovieModel.swift */; };
+		5F50086A2868CD0000768FEB /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5008692868CD0000768FEB /* Observable.swift */; };
 		5F9CA248286863F50027DE44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9CA247286863F50027DE44 /* AppDelegate.swift */; };
 		5F9CA251286863F60027DE44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F9CA250286863F60027DE44 /* Assets.xcassets */; };
 		5F9CA254286863F60027DE44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F9CA252286863F60027DE44 /* LaunchScreen.storyboard */; };
@@ -43,6 +44,7 @@
 		5F5008632868C2A500768FEB /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		5F5008652868C3DB00768FEB /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		5F5008672868C49000768FEB /* TrendingMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovieModel.swift; sourceTree = "<group>"; };
+		5F5008692868CD0000768FEB /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		5F9CA244286863F50027DE44 /* MovieDetailsMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDetailsMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F9CA247286863F50027DE44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F9CA250286863F60027DE44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		5F9CA27B28686A2C0027DE44 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5F5008692868CD0000768FEB /* Observable.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F50086A2868CD0000768FEB /* Observable.swift in Sources */,
 				5F9CA248286863F50027DE44 /* AppDelegate.swift in Sources */,
 				5F5008662868C3DB00768FEB /* APICaller.swift in Sources */,
 				5F9CA28528686F860027DE44 /* MainViewController+TableView.swift in Sources */,

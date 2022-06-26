@@ -18,6 +18,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         self.registerCells()
     }
     
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     func registerCells() {
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
@@ -32,7 +38,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
-        cell.textLabel?.text = "\(indexPath.row)"
+        cell.textLabel?.text = viewModel.getMovieTitle(moviesDataSource[indexPath.row])
         return cell
     }
 }
