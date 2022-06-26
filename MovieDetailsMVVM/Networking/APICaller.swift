@@ -16,6 +16,11 @@ enum NetworkError: Error {
 public class APICaller {
     
     static func getTrendingMovies(completionHandler: @escaping (_ result: Result<TrendingMovieModel, NetworkError>) -> Void) {
+        if NetworkConstants.shared.apiKey.isEmpty {
+            print("<!> API KEY is Missing <!>")
+            return
+        }
+        
         let urlString = NetworkConstants.shared.serverAddress +
                 "trending/all/day?api_key=" +
                 NetworkConstants.shared.apiKey
@@ -24,6 +29,7 @@ public class APICaller {
             completionHandler(Result.failure(.urlError))
             return
         }
+        
         URLSession.shared.dataTask(with: url) { dataResponse, urlResponse, err in
             if err == nil,
                let data = dataResponse,
