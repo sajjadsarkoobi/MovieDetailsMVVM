@@ -15,6 +15,8 @@
 		5F9CA26B286863F60027DE44 /* MovieDetailsMVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9CA26A286863F60027DE44 /* MovieDetailsMVVMUITestsLaunchTests.swift */; };
 		5F9CA279286868320027DE44 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9CA277286868320027DE44 /* MainViewController.swift */; };
 		5F9CA27A286868320027DE44 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F9CA278286868320027DE44 /* MainViewController.xib */; };
+		5F9CA28528686F860027DE44 /* MainViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9CA28428686F860027DE44 /* MainViewController+TableView.swift */; };
+		5F9CA287286871370027DE44 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9CA286286871370027DE44 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		5F9CA26A286863F60027DE44 /* MovieDetailsMVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsMVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5F9CA277286868320027DE44 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5F9CA278286868320027DE44 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		5F9CA28428686F860027DE44 /* MainViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+TableView.swift"; sourceTree = "<group>"; };
+		5F9CA286286871370027DE44 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,16 @@
 		5F9CA246286863F50027DE44 /* MovieDetailsMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				5F9CA27B28686A2C0027DE44 /* Classes */,
+				5F9CA28228686B980027DE44 /* Resources */,
+				5F9CA28128686AE20027DE44 /* Networking */,
+				5F9CA28028686A710027DE44 /* Extensions */,
+				5F9CA27F28686A5E0027DE44 /* Model */,
+				5F9CA27C28686A3A0027DE44 /* View */,
+				5F9CA27E28686A500027DE44 /* Controllers */,
+				5F9CA27D28686A490027DE44 /* ViewModel */,
 				5F9CA247286863F50027DE44 /* AppDelegate.swift */,
-				5F9CA250286863F60027DE44 /* Assets.xcassets */,
-				5F9CA252286863F60027DE44 /* LaunchScreen.storyboard */,
 				5F9CA255286863F60027DE44 /* Info.plist */,
-				5F9CA277286868320027DE44 /* MainViewController.swift */,
-				5F9CA278286868320027DE44 /* MainViewController.xib */,
 			);
 			path = MovieDetailsMVVM;
 			sourceTree = "<group>";
@@ -122,6 +130,76 @@
 				5F9CA26A286863F60027DE44 /* MovieDetailsMVVMUITestsLaunchTests.swift */,
 			);
 			path = MovieDetailsMVVMUITests;
+			sourceTree = "<group>";
+		};
+		5F9CA27B28686A2C0027DE44 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5F9CA27C28686A3A0027DE44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F9CA252286863F60027DE44 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F9CA27D28686A490027DE44 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5F9CA286286871370027DE44 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5F9CA27E28686A500027DE44 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5F9CA28328686BCA0027DE44 /* MainViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5F9CA27F28686A5E0027DE44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F9CA28028686A710027DE44 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5F9CA28128686AE20027DE44 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		5F9CA28228686B980027DE44 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5F9CA250286863F60027DE44 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5F9CA28328686BCA0027DE44 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5F9CA277286868320027DE44 /* MainViewController.swift */,
+				5F9CA278286868320027DE44 /* MainViewController.xib */,
+				5F9CA28428686F860027DE44 /* MainViewController+TableView.swift */,
+			);
+			path = MainViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +334,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F9CA248286863F50027DE44 /* AppDelegate.swift in Sources */,
+				5F9CA28528686F860027DE44 /* MainViewController+TableView.swift in Sources */,
 				5F9CA279286868320027DE44 /* MainViewController.swift in Sources */,
+				5F9CA287286871370027DE44 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -408,7 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
