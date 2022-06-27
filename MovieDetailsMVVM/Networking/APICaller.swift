@@ -18,6 +18,7 @@ public class APICaller {
     static func getTrendingMovies(completionHandler: @escaping (_ result: Result<TrendingMovieModel, NetworkError>) -> Void) {
         if NetworkConstants.shared.apiKey.isEmpty {
             print("<!> API KEY is Missing <!>")
+            print("<!> Get One from: https://www.themoviedb.org/ <!>")
             return
         }
         
@@ -36,7 +37,7 @@ public class APICaller {
                let resultData = try? JSONDecoder().decode(TrendingMovieModel.self, from: data) {
                 completionHandler(.success(resultData))
             } else {
-                print(err)
+                print(err.debugDescription)
                 completionHandler(.failure(.canNotParseData))
             }
         }.resume()
