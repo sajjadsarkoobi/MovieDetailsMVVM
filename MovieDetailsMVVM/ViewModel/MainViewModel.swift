@@ -11,7 +11,7 @@ class MainViewModel {
     
     var isLoadingData: Observable<Bool> = Observable(false)
     var dataSource: TrendingMovieModel?
-    var movies: Observable<[Movie]> = Observable(nil)
+    var movies: Observable<[MovieTableCellViewModel]> = Observable(nil)
     
     func numberOfSections() -> Int {
         return 1
@@ -41,7 +41,7 @@ class MainViewModel {
     }
     
     private func mapMovieData() {
-        movies.value = self.dataSource?.results ?? []
+        movies.value = self.dataSource?.results.compactMap({MovieTableCellViewModel(movie: $0)})
     }
     
     func getMovieTitle(_ movie: Movie) -> String {

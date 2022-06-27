@@ -13,7 +13,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.backgroundColor = .systemBackground
+        self.tableView.backgroundColor = .clear
         
         self.registerCells()
     }
@@ -25,11 +25,15 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func registerCells() {
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        self.tableView.register(MovieTableViewCell.register(), forCellReuseIdentifier: MovieTableViewCell.identifier)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         viewModel.numberOfSections()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        200
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,8 +41,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
-        cell.textLabel?.text = viewModel.getMovieTitle(moviesDataSource[indexPath.row])
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as? MovieTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.setupCell(viewModel: moviesDataSource[indexPath.row])
+        cell.selectionStyle = .none
         return cell
     }
 }

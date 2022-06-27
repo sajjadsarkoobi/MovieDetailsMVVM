@@ -36,6 +36,7 @@ public class APICaller {
                let resultData = try? JSONDecoder().decode(TrendingMovieModel.self, from: data) {
                 completionHandler(.success(resultData))
             } else {
+                print(err)
                 completionHandler(.failure(.canNotParseData))
             }
         }.resume()

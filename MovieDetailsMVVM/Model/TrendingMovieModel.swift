@@ -22,17 +22,15 @@ struct TrendingMovieModel: Codable {
 
 // MARK: - Result
 struct Movie: Codable {
-    let adult: Bool
-    let backdropPath: String
-    let genreIDS: [Int]
+    let adult: Bool?
+    let backdropPath: String?
+    let genreIDS: [Int] = []
     let id: Int
-    let mediaType: MediaType
     let title: String?
-    let originalLanguage: OriginalLanguage
     let originalTitle: String?
-    let overview: String
-    let popularity: Double
-    let posterPath: String
+    let overview: String?
+    let popularity: Double?
+    let posterPath: String?
     let releaseDate: String?
     let video: Bool?
     let voteAverage: Double
@@ -46,9 +44,7 @@ struct Movie: Codable {
         case backdropPath = "backdrop_path"
         case genreIDS = "genre_ids"
         case id
-        case mediaType = "media_type"
         case title
-        case originalLanguage = "original_language"
         case originalTitle = "original_title"
         case overview, popularity
         case posterPath = "poster_path"
@@ -61,14 +57,4 @@ struct Movie: Codable {
         case originalName = "original_name"
         case firstAirDate = "first_air_date"
     }
-}
-
-enum MediaType: String, Codable {
-    case movie = "movie"
-    case tv = "tv"
-}
-
-enum OriginalLanguage: String, Codable {
-    case en = "en"
-    case ko = "ko"
 }
